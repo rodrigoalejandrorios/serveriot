@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require("uuid");
 const getUser = async (req, res) => {
   try {
     const users = await User.findAll();
-    console.log(users);
+    //console.log(users);
     return res.json(users);
   } catch (e) {
     console.error(e);
@@ -38,7 +38,7 @@ const deleteUser = async (req, res) => {
     await user.destroy();
     return res.json({ message: "User delete" });
   } catch (err) {
-    tconsole.error(e);
+    console.error(e);
     res.sendStatus(500);
   }
 };

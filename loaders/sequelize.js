@@ -11,7 +11,6 @@ const sequelize = new Sequelize(
     host: "localhost",
     dialect: "mssql",
     port: "1433",
-    
   }
 );
 
