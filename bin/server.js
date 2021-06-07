@@ -4,7 +4,7 @@ const app = require("../app");
 const sequelize = require("../loaders/sequelize");
 
 dotenv.config();
-
+// console.log(process.cwd() + "/controllers");
 const server = http.createServer(app);
 const port = process.env.PORT || "5000";
 

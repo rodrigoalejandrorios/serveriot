@@ -12,6 +12,7 @@ const weatherRoute = require("./routes/weather");
 
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //RESPUESTA DE LOGUEO
@@ -24,6 +25,9 @@ app.use("/users", userRoute);
 app.use("/items", itemsRoute);
 app.use("/devices", deviseRoute);
 app.use("/weather", weatherRoute);
+//global.__basedir = __dirname;
+
+//console.log(global);
 
 //PUERTO ACTIVO
 module.exports = app;

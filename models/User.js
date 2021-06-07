@@ -4,11 +4,6 @@ const { DataTypes, Model } = require("sequelize");
 const User = sequelize.define(
   "user",
   {
-    id: {
-      type: DataTypes.STRING,
-      primaryKey: true,
-      autoIncrementIdentity: true,
-    },
     username: {
       type: DataTypes.STRING(150),
       allowNull: false,
@@ -27,7 +22,31 @@ const User = sequelize.define(
       unique: true,
       allowNull: false,
     },
+    location: {
+      type: DataTypes.STRING(150),
+      allowNull: false,
+    },
     role: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    item1: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    item2: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    item3: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    item4: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    item5: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
     },
